@@ -1,3 +1,8 @@
+/*
+    Mohammad Etedali 301056465
+    COMP 308 - Lab 1
+    Date: 2022-02-04
+*/
 import React, { useState, useEffect } from "react";
 import auth from "../../auth/auth";
 import "./Comment.css";

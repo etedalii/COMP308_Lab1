@@ -1,3 +1,8 @@
+/*
+    Mohammad Etedali 301056465
+    COMP 308 - Lab 1
+    Date: 2022-02-04
+*/
 import React, {useState , useEffect } from "react";
 import auth from "../../auth/auth";
 
@@ -27,7 +32,7 @@ export default function Thankyou(props) {
       <p>Your Course Code: {courseCode}</p>
       <p>Your Section: {section}</p>
       <p>Semester: {semester}</p>
-      <p> We appreciate your comment: <strong>{comment}</strong></p>
+      <p>We appreciate your comment: <strong>{comment}</strong></p>
     </div>
   );
 }
