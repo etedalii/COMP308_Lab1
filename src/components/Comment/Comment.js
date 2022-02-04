@@ -24,6 +24,7 @@ export default function Comment(props) {
     e.preventDefault();
 
     const data = {
+      email,
       comment ,
       courseCode,
       courseName,
@@ -39,7 +40,7 @@ export default function Comment(props) {
     setSemester("")
     setSection('')
 
-    props.history.push("/result");
+    props.history.push("/thankyou");
   };
 
   return (

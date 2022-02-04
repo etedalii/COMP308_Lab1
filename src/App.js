@@ -15,7 +15,7 @@ function App() {
         <Route path="/comment" render={data=>auth.getLogInStatus()?(
       <Comment {...data}></Comment>):
       (<Redirect to={{pathname:'/'}}></Redirect>)}></Route>
-      <Route path="/result" render={data=>auth.getLogInStatus()?(
+      <Route path="/thankyou" render={data=>auth.getLogInStatus()?(
       <Thankyou {...data}></Thankyou>):
       (<Redirect to={{pathname:'/'}}></Redirect>)}></Route>
           <Route exact path="/" component={Login}></Route>
