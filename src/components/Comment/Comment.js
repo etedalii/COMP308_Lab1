@@ -22,7 +22,23 @@ export default function Comment(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // auth.onAuthentication();
+
+    const data = {
+      comment ,
+      courseCode,
+      courseName,
+      semester,
+      section
+    };
+
+    auth.saveDataToLocalStorage(data);
+
+    setComment('');
+    setCourseCode('')
+    setCourseName("");
+    setSemester("")
+    setSection('')
+
     props.history.push("/result");
   };
 
@@ -59,7 +75,7 @@ export default function Comment(props) {
 
         <Form.Group size="lg" controlId="comment">
           <Form.Label>Comment</Form.Label>
-          <Form.Control type="text"></Form.Control>
+          <Form.Control type="text" onChange={e => setComment(e.target.value)}></Form.Control>
         </Form.Group>
 
         <Button block size="lg" className="mt-2" type="submit">
