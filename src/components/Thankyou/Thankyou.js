@@ -28,10 +28,10 @@ export default function Thankyou(props) {
   return (
     <div className="container">
       <h1>Thank you {email}</h1>
-      <p>Your Course Name: {courseName}</p>
-      <p>Your Course Code: {courseCode}</p>
-      <p>Your Section: {section}</p>
-      <p>Semester: {semester}</p>
+      <p>Your Course Name: <strong>{courseName}</strong></p>
+      <p>Your Course Code: <strong>{courseCode}</strong></p>
+      <p>Your Section: <strong>{section}</strong></p>
+      <p>Semester: <strong>{semester}</strong></p>
       <p>We appreciate your comment: <strong>{comment}</strong></p>
     </div>
   );

@@ -1,8 +1,3 @@
-/*
-    Mohammad Etedali 301056465
-    COMP 308 - Lab 1
-    Date: 2022-02-04
-*/
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
@@ -10,7 +5,11 @@ import Comment from './components/Comment/Comment';
 import Login from './components/Login/Login';
 import auth  from './auth/auth';
 import Thankyou from './components/Thankyou/Thankyou';
-
+/*
+    Mohammad Etedali 301056465
+    COMP 308 - Lab 1
+    Date: 2022-02-04
+*/
 function App() {
   return (
     <div className="wrapper">

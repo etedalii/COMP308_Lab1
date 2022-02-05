@@ -1,14 +1,13 @@
-/*
-    Mohammad Etedali 301056465
-    COMP 308 - Lab 1
-    Date: 2022-02-04
-*/
 import React, { useState, useEffect } from "react";
 import auth from "../../auth/auth";
 import "./Comment.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
+/*
+    Mohammad Etedali 301056465
+    COMP 308 - Lab 1
+    Date: 2022-02-04
+*/
 export default function Comment(props) {
   const [comment, setComment] = useState();
   const [email, setEmail] = useState();
@@ -26,26 +25,20 @@ export default function Comment(props) {
   }, []);
 
   function validateForm() {
-    return (
-      email.length > 0 &&
-      comment.length > 0 &&
-      courseCode.length > 0 &&
-      courseName.length > 0 &&
-      semester.length > 0 &&
-      section.length > 0
-    );
+    return (email!== undefined && email.length > 0) && (comment !== undefined && comment.length > 0)
+    && (courseCode !== undefined && courseCode.length > 0) && (courseName !== undefined && courseName.length > 0);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const data = {
-      email,
-      comment,
-      courseCode,
-      courseName,
-      semester,
-      section,
+      email: email,
+      comment: comment,
+      courseCode: courseCode,
+      courseName: courseName,
+      semester: semester,
+      section: section,
     };
 
     auth.saveDataToLocalStorage(data);
